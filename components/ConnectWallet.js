@@ -17,8 +17,7 @@ const contractABI = CHAIN_ID === "1" ? MainnetContractABI : RinkebyContractABI;
 const contract = new ethers.Contract(
   process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
   // 大哥，注意 ABI 的大小写 👻
-  contractABI.abi,
-  ethers.getDefaultProvider(NETWORK)
+  contractABI.abi
 );
 
 const providerOptions = {
