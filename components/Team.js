@@ -125,7 +125,7 @@ function Team() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Opensea
+                  OpenSea
                 </a>
                 。
               </div>

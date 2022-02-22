@@ -73,9 +73,14 @@ function MintButton(props) {
                   点击查看交易详情
                 </a>{" "}
                 或者到{" "}
-                <a href={`todo`} target="_blank" rel="noreferrer">
-                  Opensea 查看
+                <a
+                  href="https://opensea.io/account"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  OpenSea 查看
                 </a>
+                。
               </div>
             ),
           });

@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import Container from './Container';
-import Typography from '@mui/material/Typography';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import styled from "styled-components";
+import Container from "./Container";
+import Typography from "@mui/material/Typography";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Content = styled.div`
   max-width: 840px;
@@ -18,12 +18,12 @@ function FAQ() {
   return (
     <Container
       style={{
-        background: '#dae7f8',
+        background: "#dae7f8",
       }}
       id="faq"
     >
       <Typography
-        style={{ textAlign: 'center', marginTop: '5%' }}
+        style={{ textAlign: "center", marginTop: "5%" }}
         variant="h3"
         gutterBottom
         component="div"
@@ -31,7 +31,7 @@ function FAQ() {
         问与答
       </Typography>
 
-      <Content style={{ padding: '5px' }}>
+      <Content style={{ padding: "5px" }}>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>什么是 NFT？如何购买本项目的 NFT？</Typography>
@@ -49,7 +49,7 @@ function FAQ() {
           <AccordionDetails>
             <Typography variant="body2">
               没啥卵用，就是个头像。购买之后您将拥有对您持有 NFT
-              的无限使用权，对，就是跟 BAYC 一样的那个{' '}
+              的无限使用权，对，就是跟 BAYC 一样的那个{" "}
               <a
                 href="https://creativecommons.org/share-your-work/public-domain/cc0/"
                 target="_blank"
@@ -67,8 +67,8 @@ function FAQ() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2">
-              全宇宙（包括元宇宙）限量 <strong>1000</strong> 个。每个售价{' '}
-              <strong>0.01</strong> ETH。每个钱包地址可以铸造最多{' '}
+              全宇宙（包括元宇宙）限量 <strong>1000</strong> 个。每个售价{" "}
+              <strong>0.01</strong> ETH。每个钱包地址可以铸造最多{" "}
               <strong>2</strong> 个。每个人每天最多 <strong>2</strong> 个钱包。
             </Typography>
           </AccordionDetails>
@@ -79,14 +79,14 @@ function FAQ() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2">
-              主要我们想实际测试一下{' '}
+              主要我们想实际测试一下{" "}
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://twitter.com/AzukiZen/status/1479235139167207432"
               >
                 Azuki 的合约 Gas Fee 优化技术
-              </a>{' '}
+              </a>{" "}
               能否带来比铸造两个阿狸更低的 Gas Fee。
             </Typography>
           </AccordionDetails>
@@ -114,7 +114,7 @@ function FAQ() {
         </Accordion>
         <Accordion style={{ marginTop: 20 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>本项目是否有 Opensea 下架风险？</Typography>
+            <Typography>本项目是否有 OpenSea 下架风险？</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2">
@@ -170,7 +170,7 @@ function FAQ() {
         <Accordion style={{ marginTop: 20 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>
-              为什么 Opensea 上面设置 10% 的版税？这么高？
+              为什么 OpenSea 上面设置 10% 的版税？这么高？
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
