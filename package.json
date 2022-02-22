@@ -1,0 +1,29 @@
+{
+  "name": "gclxnft",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.4.2",
+    "@mui/material": "^5.4.2",
+    "@walletconnect/web3-provider": "^1.7.1",
+    "ethers": "^5.5.4",
+    "lodash": "^4.17.21",
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "web3modal": "^1.9.5"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.2",
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.0.10"
+  }
+}
