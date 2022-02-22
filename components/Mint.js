@@ -65,13 +65,16 @@ function MintButton(props) {
             title: "铸造成功",
             body: (
               <div>
-                查看交易详情：
                 <a
                   href={`https://${ETHERSCAN_DOMAIN}/tx/${response.transactionHash}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {response.transactionHash}
+                  点击查看交易详情
+                </a>{" "}
+                或者到{" "}
+                <a href={`todo`} target="_blank" rel="noreferrer">
+                  Opensea 查看
                 </a>
               </div>
             ),
@@ -83,6 +86,7 @@ function MintButton(props) {
             body: err.message,
           });
         }
+        props.onMinted && props.onMinted();
         setMinting(false);
       }}
       style={{
@@ -144,6 +148,11 @@ function MintSection() {
     })();
   }, []);
 
+  async function refreshStatus() {
+    const numberMinted = await contract.numberMinted(fullAddress);
+    setNumberMinted(parseInt(numberMinted));
+  }
+
   let mintButton = (
     <StyledMintButton
       style={{
@@ -163,8 +172,16 @@ function MintSection() {
           display: "flex",
         }}
       >
-        <MintButton mintAmount={1} style={{ marginRight: "20px" }} />
-        <MintButton mintAmount={2} disabled={numberMinted === 1} />
+        <MintButton
+          onMinted={refreshStatus}
+          mintAmount={1}
+          style={{ marginRight: "20px" }}
+        />
+        <MintButton
+          onMinted={refreshStatus}
+          mintAmount={2}
+          disabled={numberMinted === 1}
+        />
       </div>
     );
   }
