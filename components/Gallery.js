@@ -30,18 +30,18 @@ const GalleryItem = styled.div`
 `;
 
 const arts = [
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
-  "/images/demo.jpg",
+  "/images/demo_01.png",
+  "/images/demo_03.png",
+  "/images/demo_07.png",
+  "/images/demo_13.png",
+  "/images/demo_06.png",
+  "/images/demo_05.png",
+  "/images/demo_10.png",
+  "/images/demo_04.png",
+  "/images/demo_14.png",
+  "/images/demo_09.png",
+  "/images/demo_11.png",
+  "/images/demo_12.png",
 ];
 
 const Content = styled.div`
