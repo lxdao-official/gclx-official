@@ -14,11 +14,6 @@ import MainnetContractABI from "../abi/mainnet.json";
 const CHAIN_ID = process.env.NEXT_PUBLIC_CHAIN_ID;
 const NETWORK = CHAIN_ID === "1" ? "mainnet" : "rinkeby";
 const contractABI = CHAIN_ID === "1" ? MainnetContractABI : RinkebyContractABI;
-const contract = new ethers.Contract(
-  process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
-  // 大哥，注意 ABI 的大小写 👻
-  contractABI.abi
-);
 
 const providerOptions = {
   walletconnect: {
@@ -41,6 +36,7 @@ if (typeof window !== "undefined") {
 let provider;
 let signer;
 let instance;
+let contract;
 
 export async function connectWallet() {
   if (!instance) {
@@ -49,15 +45,22 @@ export async function connectWallet() {
     provider = new ethers.providers.Web3Provider(instance);
     // https://docs.ethers.io/v5/api/signer/
     signer = provider.getSigner();
+    contract = new ethers.Contract(
+      process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
+      // 大哥，注意 ABI 的大小写 👻
+      contractABI.abi,
+      provider
+    );
   }
 
-  return { provider, signer, web3Instance: instance };
+  return { provider, signer, web3Instance: instance, contract };
 }
 
 async function disconnectWallet() {
   provider = undefined;
   signer = undefined;
   instance = undefined;
+  contract = undefined;
   await web3ModelInstance.clearCachedProvider();
 }
 
@@ -157,7 +160,5 @@ function ConnectWallet(props) {
     </div>
   );
 }
-
-export { contract };
 
 export default ConnectWallet;

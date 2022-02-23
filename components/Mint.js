@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 import { get, subscribe } from "../store";
 import Container from "./Container";
-import ConnectWallet, { contract, connectWallet } from "./ConnectWallet";
+import ConnectWallet, { connectWallet } from "./ConnectWallet";
 import showMessage from "./showMessage";
 
 const ETHERSCAN_DOMAIN =
@@ -46,12 +46,12 @@ function MintButton(props) {
       disabled={!!props.disabled}
       minting={minting}
       onClick={async () => {
-        if (minting) {
+        if (minting || props.disabled) {
           return;
         }
         setMinting(true);
         try {
-          const { signer } = await connectWallet();
+          const { signer, contract } = await connectWallet();
           const contractWithSigner = contract.connect(signer);
           const value = ethers.utils.parseEther(
             props.mintAmount === 1 ? "0.01" : "0.02"
@@ -106,54 +106,64 @@ function MintButton(props) {
 
 function MintSection() {
   const [status, setStatus] = useState("0");
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(null);
   const [fullAddress, setFullAddress] = useState(null);
   const [numberMinted, setNumberMinted] = useState(0);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const status = await contract.status();
-        const progress = parseInt(await contract.totalSupply());
-        setStatus(status.toString());
-        setProgress(progress);
-        // 在 mint 事件的时候更新数据
-        contract.on("Minted", async (event) => {
-          const status = await contract.status();
-          const progress = parseInt(await contract.totalSupply());
-          setStatus(status.toString());
-          setProgress(progress);
-        });
-      } catch (err) {
-        showMessage({
-          type: "error",
-          title: "获取合约状态失败",
-          body: err.message,
-        });
-      }
-    })();
-  }, []);
+  async function updateStatus() {
+    const { contract } = await connectWallet();
+    const status = await contract.status();
+    const progress = parseInt(await contract.totalSupply());
+    setStatus(status.toString());
+    setProgress(progress);
+    // 在 mint 事件的时候更新数据
+    contract.on("Minted", async (event) => {
+      const status = await contract.status();
+      const progress = parseInt(await contract.totalSupply());
+      setStatus(status.toString());
+      setProgress(progress);
+    });
+  }
 
   useEffect(() => {
     (async () => {
-      const addressInStore = get("fullAddress") || null;
-      if (addressInStore) {
-        const numberMinted = await contract.numberMinted(addressInStore);
+      const fullAddressInStore = get("fullAddress") || null;
+      if (fullAddressInStore) {
+        const { contract } = await connectWallet();
+        const numberMinted = await contract.numberMinted(fullAddressInStore);
         setNumberMinted(parseInt(numberMinted));
-        setFullAddress(addressInStore);
+        setFullAddress(fullAddressInStore);
       }
       subscribe("fullAddress", async () => {
-        const addressInStore = get("fullAddress") || null;
-        setFullAddress(addressInStore);
-        if (addressInStore) {
-          const numberMinted = await contract.numberMinted(addressInStore);
+        const fullAddressInStore = get("fullAddress") || null;
+        setFullAddress(fullAddressInStore);
+        if (fullAddressInStore) {
+          const { contract } = await connectWallet();
+          const numberMinted = await contract.numberMinted(fullAddressInStore);
           setNumberMinted(parseInt(numberMinted));
+          updateStatus();
         }
       });
     })();
   }, []);
 
+  useEffect(() => {
+    try {
+      const fullAddressInStore = get("fullAddress") || null;
+      if (fullAddressInStore) {
+        updateStatus();
+      }
+    } catch (err) {
+      showMessage({
+        type: "error",
+        title: "获取合约状态失败",
+        body: err.message,
+      });
+    }
+  }, []);
+
   async function refreshStatus() {
+    const { contract } = await connectWallet();
     const numberMinted = await contract.numberMinted(fullAddress);
     setNumberMinted(parseInt(numberMinted));
   }
@@ -253,8 +263,8 @@ function MintSection() {
       {mintButton}
 
       <div style={{ marginTop: 20, fontSize: 20, textAlign: "center" }}>
-        铸造进度：{progress} / 1000，价格 0.01 ETH 一个，每个钱包最多 2
-        个，每人每天 2 个钱包。
+        铸造进度：{progress === null ? "请先连接钱包" : progress} / 1000，价格
+        0.01 ETH 一个，每个钱包最多 2 个，每人每天 2 个钱包。
         <br />
         今天，我们都是良心铸造人！
       </div>

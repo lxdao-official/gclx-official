@@ -134,7 +134,8 @@ function Summary() {
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
             我们大概在 2022 年 2 月 16
-            日立项，从零开始，只用下班时间和周末开发。
+            日立项，从零开始，只用下班时间和周末开发。第一次做 NFT
+            项目，如果遇到什么问题请多多包涵，遇到的问题我们也将认真总结在之后分享出来。
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
             当我们完成整个项目之后，也
