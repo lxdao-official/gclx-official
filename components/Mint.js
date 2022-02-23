@@ -338,7 +338,7 @@ function Mint() {
         </div>
         <Typography
           style={{ textAlign: "center", marginTop: "8%" }}
-          variant="h4"
+          variant="h5"
           gutterBottom
           component="div"
         >
@@ -349,7 +349,7 @@ function Mint() {
             marginTop: 30,
             textAlign: "center",
           }}
-          variant="body1"
+          variant="body2"
           gutterBottom
         >
           铸造成功之后，您可以选择加入国产良心 NFT
