@@ -113,15 +113,21 @@ function Intro() {
             padding: "40px 0",
           }}
         >
-          <Tooltip title="即将到来...">
-            <img
-              style={{
-                cursor: "pointer",
-                width: 40,
-                marginRight: "40px",
-              }}
-              src="/icons/opensea.svg"
-            />
+          <Tooltip title="官方 OpenSea">
+            <a
+              href="https://opensea.io/collection/gclx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                style={{
+                  cursor: "pointer",
+                  width: 40,
+                  marginRight: "40px",
+                }}
+                src="/icons/opensea.svg"
+              />
+            </a>
           </Tooltip>
           <Tooltip title="官方 Twitter">
             <a
