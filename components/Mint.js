@@ -243,6 +243,18 @@ function MintSection() {
     );
   }
 
+  mintButton = (
+    <StyledMintButton
+      style={{
+        background: "#eee",
+        color: "#999",
+        cursor: "not-allowed",
+      }}
+    >
+      全部卖完了
+    </StyledMintButton>
+  );
+
   return (
     <div
       style={{
@@ -259,9 +271,18 @@ function MintSection() {
           </span>
         )}
       </div>
-
       {mintButton}
-
+      <div style={{ marginTop: 10 }}>
+        请移步在{" "}
+        <a
+          href="https://opensea.io/collection/gclx"
+          target="_blank"
+          rel="noreferrer"
+        >
+          OpenSea
+        </a>{" "}
+        上查看。
+      </div>
       <div style={{ marginTop: 20, fontSize: 20, textAlign: "center" }}>
         铸造进度：{progress === null ? "请先连接钱包" : progress} / 1000，价格
         0.01 ETH 一个，每个钱包最多 2 个，每人每天 2 个钱包。

@@ -129,6 +129,22 @@ function Intro() {
               />
             </a>
           </Tooltip>
+          <Tooltip title="官方 LooksRare">
+            <a
+              href="https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                style={{
+                  cursor: "pointer",
+                  width: 40,
+                  marginRight: "40px",
+                }}
+                src="/icons/looksrare.png"
+              />
+            </a>
+          </Tooltip>
           <Tooltip title="官方 Twitter">
             <a
               href="https://twitter.com/gclxnft"
