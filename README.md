@@ -8,7 +8,7 @@
 
 ```
 git clone https://github.com/brucexu-eth/gclx-official.git
-cd gclxnft
+cd gclx-official
 npm install
 npm run dev
 ```
