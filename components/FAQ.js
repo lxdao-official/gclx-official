@@ -49,7 +49,7 @@ function FAQ() {
           <AccordionDetails>
             <Typography variant="body2">
               没啥卵用，就是个头像。购买之后您将拥有对您持有 NFT
-              的无限使用权，对，就是跟 BAYC 一样的那个{" "}
+              的无限使用权，对，就是那个{" "}
               <a
                 href="https://creativecommons.org/share-your-work/public-domain/cc0/"
                 target="_blank"
