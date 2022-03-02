@@ -44,7 +44,7 @@ function Roadmap() {
             target="_blank"
             rel="noreferrer"
           >
-            已完成
+            提前完成
           </a>
           ）
         </Typography>
