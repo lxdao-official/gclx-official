@@ -29,7 +29,7 @@ export default function Home() {
       <Head>
         <title>国产良心 NFT - 全宇宙限量 1000 的中国国产良心 NFT！</title>
         <meta name="description" content="中国人不骗中国人，放心！" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.gif" />
 
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <script

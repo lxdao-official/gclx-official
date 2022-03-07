@@ -33,7 +33,7 @@ function Whitelist() {
           variant="body1"
           gutterBottom
         >
-          您好我的朋友，我们是国产良心 NFT，为了节约您宝贵的时间并且减少 Discord
+          您好我的朋友，我们是国产良心 NFT的仿盘，为了节约您宝贵的时间并且减少 Discord
           公司的运营成本和环境污染，我们艰难决定：
           <strong>不设置 Discord 和白名单</strong>。
         </Typography>
@@ -56,7 +56,7 @@ function Whitelist() {
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           1. 本项目<strong>没有公开 Discord</strong>
-          。会员频道将只针对持有者开放，铸造之后可以看到，进去了也请少说废话，谢谢合作。
+          。甚至没有会员频道，您购买的只是GIF。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           2.
@@ -69,10 +69,10 @@ function Whitelist() {
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           4. 当然，打字、唱歌、跳舞、编故事、行为艺术等技能也不需要。
-          <strong>我们也不会为您出难题或者玩游戏</strong>，实在是没时间。
+          <strong>我们也不会为您出难题或者玩游戏</strong>，没有交流频道。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          5. 您<strong>无需直播吃屎</strong>也能参与本项目。
+          5. 您<strong>就算直播吃屎</strong>也能参与本项目。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           6. 我们<strong>不会与任何其他项目方或者 club 合作参与抽奖</strong>
@@ -80,7 +80,7 @@ function Whitelist() {
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           7. 我们总量才 1000 个，
-          <strong>想不出什么办法送 1000 份白名单给平台合作方</strong>，算了。
+          <strong>甚至更少，被告侵权或者下载的GIF不够</strong>，算了。
         </Typography>
         <Typography
           style={{ textAlign: "center", marginTop: "8%" }}
@@ -98,20 +98,19 @@ function Whitelist() {
           哦，我的朋友，您是否知道科学家也是人，他们也有家庭和孩子！
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          因为我们是国产良心 NFT
-          项目，我们决定对科学家一视同仁。主要有以下几个原因：
+          因为我们是国产良心 NFT的仿盘项目，我们决定对科学家一视同仁。主要有以下几个原因：
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           1. 我们实际上并不在乎二级市场的表现，正如您所看到的发展路线，
-          <strong>我们只做一锤子买卖</strong>。
+          <strong>我们只是一个仿盘</strong>。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          2. 我们<strong>项目组技术水平一般</strong>，我们不懂如何通过 ThinkPHP
+          2. 我们<strong>项目组没有技术</strong>，我们更不可能懂如何通过 <strong>ThinkPHP（话说这是什么）</strong>
           等成熟稳定的技术来保护我们的铸造过程。也不懂怎么放个假代码假图片上线前突然改掉，玩弄一下科学家顺便屏蔽掉一些真实用户的技术。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           3. 我们<strong>鼓励每个人都具备一定的科学家知识和能力</strong>。这在
-          Web3
+          Web3（这个概念还是要了解下的）
           的世界，可以让你更好的赚钱和保护你的财产。正如您为了拿白学会了画画，为什么不能同样的学习下科学家知识呢。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>

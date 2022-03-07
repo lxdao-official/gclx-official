@@ -85,22 +85,24 @@ function Gallery() {
           variant="body1"
           gutterBottom
         >
-          1. 我们是国产良心 NFT，以上图片均为实际作品效果，
-          <strong>所见即所得</strong>
-          ，我们保证开图时不会为您带来惊吓、眩晕、呕吐等不适感。
+          1. 如您所看到，我们完全是<strong>国产良心</strong>的仿盘
+          拥有其特性，只是JPG变成GIF。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          2. 我们<strong>仅设置 1000 份限量作品</strong>
-          ，因为我们精力有限难以保证质量，我们保证不会为了多卖而滥竽充数，我们保证不以任何方式增发。
+          2. 我们<strong>也仅设置 1000 份限量作品</strong>
+          ，并且还都是从不同网站上下载下来的。。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           3. 如果您很穷没有钱，但又非常喜欢本系列作品，我们建议您
           <strong>右键保存图片</strong>，请不要借贷或者卖房参与。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          4. 因为我们是国产良心
-          NFT，我们非常清楚作品的艺术价值和项目的开发成本，因此我们设置了作品的
+          4. 因为我们是国产良心仿盘
+          NFT，我们肯定遵守了国产良心的优良传统，
           <strong>良心价为 0.01 ETH 一个</strong>，童叟无欺。
+        </Typography>
+        <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
+          5. 如果您坚持要购买我们的产品，请做好被告侵权然后<strong>销毁</strong>的风险。
         </Typography>
       </Content>
     </Container>
