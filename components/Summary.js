@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import Container from "./Container";
-import Typography from "@mui/material/Typography";
-import Dialog from "@mui/material/Dialog";
-import Slide from "@mui/material/Slide";
-import CloseIcon from "@mui/icons-material/Close";
-import IconButton from "@mui/material/IconButton";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Container from './Container';
+import Typography from '@mui/material/Typography';
+import Dialog from '@mui/material/Dialog';
+import Slide from '@mui/material/Slide';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -34,24 +34,28 @@ function Summary() {
   return (
     <Container
       style={{
-        background: "#fff",
-        padding: "60px 0",
+        background: '#fff',
+        padding: '60px 0',
       }}
       id="summary"
     >
-      <Typography style={{ textAlign: "center" }}>
-        最后，{" "}
-        <span
-          style={{
-            borderBottom: "2px dashed #5383b2",
-            color: "#5383b2",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            setOpen(true);
-          }}
-        >
-          真心
+      <Typography style={{ textAlign: 'center' }}>
+        最后，{' '}
+        <span>
+          <span
+            style={{
+              borderBottom: '2px dashed #5383b2',
+              color: '#5383b2',
+              cursor: 'pointer',
+              fontSize: 100,
+            }}
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            真心
+          </span>
+          <span>（点击真心有彩蛋啊！！）</span>
         </span>
         希望这个国产良心 NFT 项目，是未来国产项目的地板水平。
       </Typography>
@@ -59,7 +63,7 @@ function Summary() {
         <Head>
           <Typography
             variant="h3"
-            style={{ textAlign: "center", fontWeight: "bold" }}
+            style={{ textAlign: 'center', fontWeight: 'bold' }}
           >
             好吧，说点认真的
           </Typography>
@@ -68,9 +72,9 @@ function Summary() {
               setOpen(false);
             }}
             style={{
-              position: "fixed",
-              top: "30px",
-              right: "30px",
+              position: 'fixed',
+              top: '30px',
+              right: '30px',
             }}
           >
             <CloseIcon style={{ fontSize: 40 }} />
@@ -87,7 +91,7 @@ function Summary() {
             首先声明，对于本项目，<strong>我们并没有恶意</strong>
             ，如果您觉得网站内容对您有冒犯，请随时联系 Bruce
             修改。此外，页面上提到了 NextDAO，只因我在 NextDAO
-            的群里比较活跃，收获了 DAO 友的一些建议（包括但不限于：{" "}
+            的群里比较活跃，收获了 DAO 友的一些建议（包括但不限于：{' '}
             <a
               href="https://twitter.com/Penny777_eth"
               target="_blank"
@@ -110,15 +114,15 @@ function Summary() {
               rel="noreferrer"
             >
               0xSea.eth
-            </a>{" "}
-            等等），合约部分也收到了 NextDAO 核心成员{" "}
+            </a>{' '}
+            等等），合约部分也收到了 NextDAO 核心成员{' '}
             <a
               href="https://twitter.com/shep_eth"
               target="_blank"
               rel="noreferrer"
             >
               shep.eth
-            </a>{" "}
+            </a>{' '}
             的帮助。但是并不代表 NextDAO 的观点和立场，
             <strong>仅作为个人行为</strong>。
           </Typography>
@@ -140,9 +144,19 @@ function Summary() {
           <Typography style={{ marginBottom: 20 }}>
             当我们完成整个项目之后，也
             <strong>
-              将会完全开源整个项目的网站源代码、部署方式文档、合约项目代码以及图片素材等。
+              <del>
+                将会完全开源整个项目的网站源代码、部署方式文档、合约项目代码以及图片素材等。
+              </del>
             </strong>
-            并且逐步编写开发经验介绍文章等，希望可以对同行有所帮助。
+            （
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://twitter.com/gclxnft/status/1500805763404496896"
+            >
+              2022.03.08 已完成
+            </a>
+            ） 并且逐步编写开发经验介绍文章等，希望可以对同行有所帮助。
             <strong>
               所有内容将以 MIT 的开源协议开源，并不限制任何使用用途。
             </strong>
@@ -155,12 +169,26 @@ function Summary() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/brucexu-eth/gclx-official"
+              href="https://github.com/GuoChanLiangXin/gclx-official"
             >
-              https://github.com/brucexu-eth/gclx-official
+              https://github.com/GuoChanLiangXin/gclx-official
             </a>
-            <br />- 合约代码：TBA
-            <br />- 图片素材：TBA
+            <br />- 合约代码：
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GuoChanLiangXin/gclx-contracts"
+            >
+              https://github.com/GuoChanLiangXin/gclx-contracts
+            </a>
+            <br />- 图片素材：
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GuoChanLiangXin/gclx-art-engine"
+            >
+              https://github.com/GuoChanLiangXin/gclx-art-engine
+            </a>
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
             我们希望【国产良心】NFT
@@ -169,24 +197,24 @@ function Summary() {
             了！我们也完全理解项目方可能很难摸清楚技术外包的水平，所以您在找项目技术外包的时候，也可以将此源代码作为最差最差的水平去衡量对方的水平。
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
-            如果您实在是找不到靠谱技术外包，可以官方推特{" "}
+            如果您实在是找不到靠谱技术外包，可以官方推特{' '}
             <a
               href="https://twitter.com/gclxnft"
               target="_blank"
               rel="noreferrer"
             >
               @gclxnft
-            </a>{" "}
+            </a>{' '}
             或者 NextDAO，我们的成员有不少技术还不错的靠谱小伙伴。冷兔 XRC
             项目的智能合约也是 NextDAO 主导做的。
           </Typography>
           <Typography
             variant="h4"
             style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              marginTop: "30px",
-              marginBottom: "30px",
+              textAlign: 'center',
+              fontWeight: 'bold',
+              marginTop: '30px',
+              marginBottom: '30px',
             }}
           >
             真正的发展路线
@@ -201,14 +229,14 @@ function Summary() {
             。我们其实也不知道谁会买，会进来这个频道，至于频道里面会聊什么以及后续的发展，顺其自然吧。项目组将不会管理或者干涉，所有后续大家自己讨论投票吧。
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
-            3. 官方推特{" "}
+            3. 官方推特{' '}
             <a
               href="https://twitter.com/gclxnft"
               target="_blank"
               rel="noreferrer"
             >
               @gclxnft
-            </a>{" "}
+            </a>{' '}
             将作为<strong>客观信息放大器</strong>
             ，转发或者发布有证据的客观信息以供关注者判断项目的好坏以及是否参加，正面负面有证据的客观信息都将转发，尽量保持客观、中立、无利益相关，也会做点科普。
           </Typography>
@@ -222,10 +250,10 @@ function Summary() {
           <Typography
             variant="h4"
             style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              marginTop: "30px",
-              marginBottom: "30px",
+              textAlign: 'center',
+              fontWeight: 'bold',
+              marginTop: '30px',
+              marginBottom: '30px',
             }}
           >
             对未来国产项目的一点点期望
@@ -258,16 +286,16 @@ function Summary() {
               rel="noreferrer"
             >
               X Rabbits Club
-            </a>{" "}
-            的{" "}
+            </a>{' '}
+            的{' '}
             <a
               href="https://twitter.com/Yishuihan"
               target="_blank"
               rel="noreferrer"
             >
               Yishuihan
-            </a>{" "}
-            和{" "}
+            </a>{' '}
+            和{' '}
             <a
               href="https://opensea.io/collection/the-weirdo-ghost-gang"
               target="_blank"
@@ -275,25 +303,25 @@ function Summary() {
             >
               WeirdoGhostGang
             </a>
-            的{" "}
+            的{' '}
             <a
               href="https://twitter.com/sleepy0x13"
               target="_blank"
               rel="noreferrer"
             >
               Sleepy0x13
-            </a>{" "}
+            </a>{' '}
             做出了很好的榜样，当然也承受了很大的压力，希望大家支持！
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
-            6. 用一些高明的运营策略，尽量公平公正不需要肝。比如{" "}
+            6. 用一些高明的运营策略，尽量公平公正不需要肝。比如{' '}
             <a
               href="https://twitter.com/WGMInterfaces"
               target="_blank"
               rel="noreferrer"
             >
               Interfaces
-            </a>{" "}
+            </a>{' '}
             项目的白名单全部公开透明，没有 Discord 等。很多知名项目限时开放
             Discord，通过
             IP、钱包交互等识别机器人、代肝工作室然后下白等，非常麻烦但是也大概率会非常成功。
@@ -304,7 +332,7 @@ function Summary() {
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
             8. 使用<strong>先进靠谱的技术</strong>
-            。无数的案例已经告诉我们，技术上的一个漏洞或者问题，都很容易导致整个项目的失败。前者有{" "}
+            。无数的案例已经告诉我们，技术上的一个漏洞或者问题，都很容易导致整个项目的失败。前者有{' '}
             <a
               href="https://www.wikibit.com.cn/202109084254562329.html"
               target="_blank"
@@ -323,7 +351,7 @@ function Summary() {
             ，都为项目带来了非常大的损失。
           </Typography>
 
-          <div style={{ textAlign: "center", marginTop: 40, fontSize: 24 }}>
+          <div style={{ textAlign: 'center', marginTop: 40, fontSize: 24 }}>
             （完）
           </div>
           <div
@@ -331,13 +359,13 @@ function Summary() {
               marginTop: 20,
               marginBottom: 40,
               fontSize: 16,
-              color: "#999",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              color: '#999',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
-            话说老板来都来了，真不 Mint 一个再走？{" "}
+            话说老板来都来了，真不 Mint 一个再走？{' '}
             <img src="/icons/yaofan.jpg" style={{ width: 40 }} alt="" />
           </div>
         </Content>
