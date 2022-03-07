@@ -86,7 +86,7 @@ function FAQ() {
                 href="https://twitter.com/AzukiZen/status/1479235139167207432"
               >
                 Azuki 的合约 Gas Fee 优化技术
-              </a>{" "}
+              </a>{"（实际上我并不知道这是个什么东西）"}
               能否带来比铸造两个阿狸更低的 Gas Fee。
             </Typography>
           </AccordionDetails>

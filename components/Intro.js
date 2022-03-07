@@ -73,7 +73,7 @@ function Intro() {
       id="intro"
     >
       <Head>
-        <h1>国产良心 NFT</h1>
+        <h1>国产良心 NFT(GIF)</h1>
         <MenuWrapper>
           <MenuItem elementId="intro">介绍</MenuItem>
           <MenuItem elementId="roadmap">发展路线</MenuItem>
@@ -102,11 +102,20 @@ function Intro() {
           variant="body1"
           gutterBottom
         >
-          请放心参与，咱中国人不骗中国人{" "}
+          请放心参与，咱中国人不骗中国人{"，保证绝对能动\n"}
           <img
             style={{ width: 36, position: "relative", top: 5 }}
             src="/icons/doge.png"
           />
+        </Typography>
+        <Typography
+          style={{
+            marginTop: "2%",
+          }}
+          variant="body1"
+          gutterBottom
+        >
+          因二期项目方实力不如一期，LooksRare没有了{""}
         </Typography>
         <div
           style={{
@@ -126,22 +135,6 @@ function Intro() {
                   marginRight: "40px",
                 }}
                 src="/icons/opensea.svg"
-              />
-            </a>
-          </Tooltip>
-          <Tooltip title="官方 LooksRare">
-            <a
-              href="https://looksrare.org/zh_hans/collections/0xBf66f2d9630A033022602c3279b04b4a37399927"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                style={{
-                  cursor: "pointer",
-                  width: 40,
-                  marginRight: "40px",
-                }}
-                src="/icons/looksrare.png"
               />
             </a>
           </Tooltip>

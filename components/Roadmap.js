@@ -34,11 +34,9 @@ function Roadmap() {
           gutterBottom
         >
           <strong>2022 Q1</strong>{" "}
-          <del>
-            我们这就是一个卖 JPG 的项目，所以我们的 Q1
-            发展目标就是把所有图片全部卖掉。
-          </del>
-          （2022.03.02{" "}
+            我们这就是一个卖 GIF 的项目，所以我们的 Q1
+            发展目标就是把所有动态图全部卖掉。
+          {/* （2022.03.02{" "}
           <a
             href="https://twitter.com/gclxnft/status/1498978154056065024"
             target="_blank"
@@ -46,7 +44,7 @@ function Roadmap() {
           >
             提前完成
           </a>
-          ）
+          ） */}
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q2</strong> 我们保证不会做【国产良心
@@ -61,8 +59,7 @@ function Roadmap() {
           我们大概在这个时间或者之前卷钱跑路，所有未MINT完成的NFT将会被全部锁定在合约当中，同时我们将放弃合约的控制权，交给社区管理！
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          我们是国产良心 NFT
-          项目，不太擅长开空头支票。如果之后做了，就算超出预期吧，再更新上来。
+          我们是国产良心 NFT 的仿盘项目，完全没有任何想法和点子。甚至就连源码都是抄过来的，在此感谢国产良心项目方的伟大贡献。
         </Typography>
       </Content>
     </Container>
