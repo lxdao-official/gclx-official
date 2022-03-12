@@ -330,10 +330,22 @@ function PFPMaker() {
         gutterBottom
         component="div"
       >
-        头像生成器
+        头像生成器（新增）
       </Typography>
 
       <Content style={{ padding: "5px" }}>
+        <Typography variant="body2" style={{ marginBottom: 20 }}>
+          由于本项目只有 1000
+          份比较少，有些朋友没有开到自己满意的头像，为了处理相关维权问题，我们加班加点推出头像生成器！
+        </Typography>
+        <Typography variant="body2" style={{ marginBottom: 30 }}>
+          无论您是否持有国产良心 NFT，
+          <strong>
+            只要您喜欢国产良心，都可以生成头像使用，用了就都是家人
+          </strong>
+          （当然也有了义务）。 虽然您现在没有钱购买国产良心
+          NFT，但是我们相信您富起来只是时间问题，到时候可以再补回来！
+        </Typography>
         <div>
           <PFPTool />
         </div>

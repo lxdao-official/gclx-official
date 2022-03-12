@@ -46,7 +46,7 @@ function Roadmap() {
           >
             2022.03.02 提前完成
           </a>
-          ）
+          ）2022.03.13 新增：头像生成器。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q2</strong> 我们保证不会做【国产良心
