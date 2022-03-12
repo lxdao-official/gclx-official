@@ -139,9 +139,6 @@ const PFPAvatarWrapper = styled.div`
     left: 0;
     z-index: 1;
   }
-  canvas {
-    width: 280px;
-  }
 `;
 
 const loadImage = (src) =>
@@ -158,6 +155,8 @@ function isWeChat() {
 
 function PFPCanvas(props) {
   const canvasRef = useRef(null);
+  // for stupid WeChat
+  const [imgDataURI, setImgDataURI] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -188,13 +187,21 @@ function PFPCanvas(props) {
       imagesObj.forEach((image) => {
         ctx.drawImage(image, 0, 0);
       });
+
+      setImgDataURI(canvas.toDataURL("image/png"));
     })();
   }, [props.pfp]);
 
   return (
     <div>
       <PFPAvatarWrapper>
-        <canvas width="600" height="600" ref={canvasRef} />
+        <img src={imgDataURI} alt="" />
+        <canvas
+          style={{ display: "none" }}
+          width="600"
+          height="600"
+          ref={canvasRef}
+        />
       </PFPAvatarWrapper>
       <div
         style={{ display: "flex", justifyContent: "center", padding: "10px 0" }}
@@ -206,7 +213,7 @@ function PFPCanvas(props) {
             if (isWeChat()) {
               showMessage({
                 title:
-                  "由于微信浏览器的限制，无法下载图片，请【长摁头像保存为图片】谢谢。",
+                  "由于微信浏览器的限制，无法下载图片，请【长摁头像保存为图片】或者右上角用系统浏览器打开使用，谢谢。",
               });
             } else {
               const canvas = canvasRef.current;
