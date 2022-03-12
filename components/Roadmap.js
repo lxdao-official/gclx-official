@@ -46,7 +46,15 @@ function Roadmap() {
           >
             2022.03.02 提前完成
           </a>
-          ）2022.03.13 新增：头像生成器。
+          ）2022.03.13 新增：
+          <a
+            href="https://twitter.com/gclxnft/status/1502628450930081796"
+            target="_blank"
+            rel="noreferrer"
+          >
+            头像生成器
+          </a>
+          。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q2</strong> 我们保证不会做【国产良心
