@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import styled from "styled-components";
 import FileSaver from "file-saver";
 import _ from "lodash";
-import { loadImage } from "canvas";
 import Typography from "@mui/material/Typography";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -157,6 +156,13 @@ function PFPAvatar(props) {
   );
 }
 
+const loadImage = (src) =>
+  new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = src;
+  });
 function PFPCanvas(props) {
   const canvasRef = useRef(null);
 
