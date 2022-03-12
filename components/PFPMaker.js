@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import FileSaver from "file-saver";
 import _ from "lodash";
@@ -8,6 +8,7 @@ import Tab from "@mui/material/Tab";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 
+import showMessage from "./showMessage";
 import { padWidth } from "../utils";
 import Container from "./Container";
 import { TRAITS } from "./traits";
@@ -138,23 +139,10 @@ const PFPAvatarWrapper = styled.div`
     left: 0;
     z-index: 1;
   }
+  canvas {
+    width: 280px;
+  }
 `;
-
-function PFPAvatar(props) {
-  const pfp = props.pfp;
-  return (
-    <PFPAvatarWrapper>
-      <img src="/traits/Lian.jpg" alt="" />
-      {pfp.Bizi && <img src={`/traits/Bizi/${pfp.Bizi}.png`} alt="" />}
-      {pfp.Yanjing && <img src={`/traits/Yanjing/${pfp.Yanjing}.png`} alt="" />}
-      {pfp.Zuiba && <img src={`/traits/Zuiba/${pfp.Zuiba}.png`} alt="" />}
-      {pfp.Zhuangshi && (
-        <img src={`/traits/Zhuangshi/${pfp.Zhuangshi}.png`} alt="" />
-      )}
-      {pfp.Faxing && <img src={`/traits/Faxing/${pfp.Faxing}.png`} alt="" />}
-    </PFPAvatarWrapper>
-  );
-}
 
 const loadImage = (src) =>
   new Promise((resolve, reject) => {
@@ -164,18 +152,50 @@ const loadImage = (src) =>
     img.src = src;
   });
 
+function isWeChat() {
+  return /MicroMessenger/i.test(window.navigator.userAgent);
+}
+
 function PFPCanvas(props) {
   const canvasRef = useRef(null);
 
+  useEffect(() => {
+    (async () => {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, 600, 600);
+      ctx.beginPath();
+      ctx.rect(0, 0, 600, 600);
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+
+      let images = ["/traits/Lian.jpg"];
+      Object.keys(props.pfp).forEach((pfpKey) => {
+        if (props.pfp[pfpKey]) {
+          images.push(`/traits/${pfpKey}/${props.pfp[pfpKey]}.png`);
+        }
+      });
+      // always move Faxing to the end
+      images.push(
+        images.splice(
+          images.findIndex((img) => img.includes("Faxing")),
+          1
+        )[0]
+      );
+
+      const imagesObj = await Promise.all(images.map(loadImage));
+
+      imagesObj.forEach((image) => {
+        ctx.drawImage(image, 0, 0);
+      });
+    })();
+  }, [props.pfp]);
+
   return (
     <div>
-      <PFPAvatar pfp={props.pfp}></PFPAvatar>
-      <canvas
-        style={{ display: "none" }}
-        width="600"
-        height="600"
-        ref={canvasRef}
-      />
+      <PFPAvatarWrapper>
+        <canvas width="600" height="600" ref={canvasRef} />
+      </PFPAvatarWrapper>
       <div
         style={{ display: "flex", justifyContent: "center", padding: "10px 0" }}
       >
@@ -183,37 +203,17 @@ function PFPCanvas(props) {
           size="small"
           variant="contained"
           onClick={async () => {
-            const canvas = canvasRef.current;
-            const ctx = canvas.getContext("2d");
-            ctx.clearRect(0, 0, 600, 600);
-            ctx.beginPath();
-            ctx.rect(0, 0, 600, 600);
-            ctx.fillStyle = "#fff";
-            ctx.fill();
-
-            let images = ["/traits/Lian.jpg"];
-            Object.keys(props.pfp).forEach((pfpKey) => {
-              if (props.pfp[pfpKey]) {
-                images.push(`/traits/${pfpKey}/${props.pfp[pfpKey]}.png`);
-              }
-            });
-            // always move Faxing to the end
-            images.push(
-              images.splice(
-                images.findIndex((img) => img.includes("Faxing")),
-                1
-              )[0]
-            );
-
-            const imagesObj = await Promise.all(images.map(loadImage));
-
-            imagesObj.forEach((image) => {
-              ctx.drawImage(image, 0, 0);
-            });
-
-            canvas.toBlob((imageBlob) => {
-              FileSaver.saveAs(imageBlob, "gclx.png");
-            });
+            if (isWeChat()) {
+              showMessage({
+                title:
+                  "由于微信浏览器的限制，无法下载图片，请【长摁头像保存为图片】谢谢。",
+              });
+            } else {
+              const canvas = canvasRef.current;
+              canvas.toBlob((imageBlob) => {
+                FileSaver.saveAs(imageBlob, "gclx.png");
+              });
+            }
           }}
         >
           下载头像
