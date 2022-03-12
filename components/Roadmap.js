@@ -38,15 +38,15 @@ function Roadmap() {
             我们这就是一个卖 JPG 的项目，所以我们的 Q1
             发展目标就是把所有图片全部卖掉。
           </del>
-          （2022.03.02{" "}
+          （
           <a
             href="https://twitter.com/gclxnft/status/1498978154056065024"
             target="_blank"
             rel="noreferrer"
           >
-            提前完成
+            2022.03.02 提前完成
           </a>
-          ）
+          ）2022.03.13 新增：头像生成器。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q2</strong> 我们保证不会做【国产良心

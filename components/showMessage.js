@@ -42,23 +42,25 @@ function SimpleModal(props) {
   return (
     <Dialog onClose={onClose} open={visible}>
       <DialogWrapper>
-        <IconWrapper>
-          {props.type === "success" ? (
-            <CheckCircleIcon
-              sx={{
-                fontSize: "40px",
-              }}
-              color="success"
-            ></CheckCircleIcon>
-          ) : (
-            <ErrorIcon
-              sx={{
-                fontSize: "40px",
-              }}
-              color="error"
-            ></ErrorIcon>
-          )}
-        </IconWrapper>
+        {props.type && (
+          <IconWrapper>
+            {props.type === "success" ? (
+              <CheckCircleIcon
+                sx={{
+                  fontSize: "40px",
+                }}
+                color="success"
+              ></CheckCircleIcon>
+            ) : (
+              <ErrorIcon
+                sx={{
+                  fontSize: "40px",
+                }}
+                color="error"
+              ></ErrorIcon>
+            )}
+          </IconWrapper>
+        )}
         <DialogContent>
           <DialogTitle>{props.title}</DialogTitle>
           <DialogBody>{props.body}</DialogBody>
