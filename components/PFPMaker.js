@@ -9,6 +9,7 @@ import Tab from "@mui/material/Tab";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 
+import { padWidth } from "../utils";
 import Container from "./Container";
 import { TRAITS } from "./traits";
 
@@ -245,18 +246,29 @@ function getRandomTraits() {
 
 const PFPMakerWrapper = styled.div`
   display: flex;
+  @media only screen and (max-width: ${padWidth}) {
+    flex-direction: column;
+  }
 `;
 const PFPMakerLeft = styled.div`
   flex-basis: 50%;
   background: #fff;
   border: 2px solid #ccc;
   min-height: 504px;
+  @media only screen and (max-width: ${padWidth}) {
+    flex-basis: auto;
+    min-height: auto;
+    margin-bottom: 30px;
+  }
 `;
 const PFPMakerRight = styled.div`
   display: flex;
   flex-basis: 50%;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: ${padWidth}) {
+    flex-basis: auto;
+  }
 `;
 
 function PFPTool() {
