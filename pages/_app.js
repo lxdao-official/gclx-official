@@ -25,6 +25,17 @@ const theme = createTheme({
       main: '#000',
     },
   },
+  components: {
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          padding: 0,
+          margin: '0 !important',
+          background: 'transparent',
+        },
+      },
+    },
+  },
 });
 
 theme.typography.h3 = {
