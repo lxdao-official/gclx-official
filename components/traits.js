@@ -1,5 +1,5 @@
 export const TRAITS = {
-  1: [
+  Faxing: [
     {
       name: '包子头',
       key: 'Bazi Tou',
@@ -96,7 +96,7 @@ export const TRAITS = {
       img: '/traits/Faxing/Zangbian Tou.png',
     },
   ],
-  2: [
+  Yanjing: [
     {
       name: '白眼',
       key: 'Bai Yan',
@@ -159,7 +159,7 @@ export const TRAITS = {
     },
     {
       name: '普通眼',
-      key: 'Yan.png',
+      key: 'Yan',
       img: '/traits/Yanjing/Yan.png',
     },
     {
@@ -168,7 +168,7 @@ export const TRAITS = {
       img: '/traits/Yanjing/Zha Yan.png',
     },
   ],
-  3: [
+  Bizi: [
     {
       name: 'bb鼻',
       key: 'Bibi Bi',
@@ -235,7 +235,7 @@ export const TRAITS = {
       img: '/traits/Bizi/Zuogou Bi.png',
     },
   ],
-  4: [
+  Zuiba: [
     {
       name: '波浪嘴',
       key: 'Bolang Zui',
@@ -307,7 +307,7 @@ export const TRAITS = {
       img: '/traits/Zuiba/Zhuaizhuai Zui.png',
     },
   ],
-  5: [
+  Zhuangshi: [
     {
       name: '胡子',
       key: 'Huzi',
