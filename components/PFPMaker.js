@@ -7,6 +7,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
+import Checkbox from "@mui/material/Checkbox";
 
 import showMessage from "./showMessage";
 import { padWidth } from "../utils";
@@ -203,9 +204,11 @@ function PFPCanvas(props) {
           ref={canvasRef}
         />
       </PFPAvatarWrapper>
-      <div
-        style={{ display: "flex", justifyContent: "center", padding: "10px 0" }}
-      >
+      <div style={{ display: "flex", alignItems: "center", padding: "5px 0" }}>
+        <Checkbox size="small" disabled />
+        <span style={{ color: "#aaa" }}>添加激光眼？（即将上线）</span>
+      </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <Button
           size="small"
           variant="contained"
