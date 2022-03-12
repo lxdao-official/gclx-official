@@ -162,8 +162,16 @@ function FAQ() {
             <Typography variant="body2">
               <strong>所有收益直接卷走</strong>
               平均分给两位项目组成员，应该不会回馈社区。更具体的打算：Bruce
-              想要换掉用了 4 年的 Intel MacBook 继续 BUIDL Web3；Muxin
-              打算买点画材继续创作。
+              想要换掉用了 4 年的 Intel MacBook 继续 BUIDL Web3；
+              <del>Muxin 打算买点画材继续创作。</del>（
+              <a
+                href="https://twitter.com/gclxnft/status/1502585088432742401"
+                target="_blank"
+                rel="noreferrer"
+              >
+                2022.03.12 完成
+              </a>
+              ）
             </Typography>
           </AccordionDetails>
         </Accordion>
