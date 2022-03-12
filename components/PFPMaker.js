@@ -163,6 +163,7 @@ const loadImage = (src) =>
     img.onerror = reject;
     img.src = src;
   });
+
 function PFPCanvas(props) {
   const canvasRef = useRef(null);
 
@@ -217,14 +218,29 @@ function PFPCanvas(props) {
         >
           下载头像
         </Button>
-        <Button
-          style={{ marginLeft: "auto", marginRight: 10 }}
-          onClick={props.onRandom}
-          size="small"
-          variant="outlined"
+        <Tooltip
+          title={
+            <div
+              style={{
+                background: "#000",
+                padding: "5px 10px",
+                marginTop: 10,
+              }}
+            >
+              随机生成也可以在左侧修改个别部件哦
+            </div>
+          }
+          placement="bottom"
         >
-          随机生成
-        </Button>
+          <Button
+            style={{ marginLeft: "auto", marginRight: 10 }}
+            onClick={props.onRandom}
+            size="small"
+            variant="outlined"
+          >
+            随机生成
+          </Button>
+        </Tooltip>
         <Button onClick={props.onReset} size="small" variant="outlined">
           重置
         </Button>
