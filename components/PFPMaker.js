@@ -101,7 +101,8 @@ function PFPRTraits(props) {
         <Tab label="眼睛" value="Yanjing" />
         <Tab label="鼻子" value="Bizi" />
         <Tab label="嘴巴" value="Zuiba" />
-        <Tab label="装饰" value="Zhuangshi" />
+        <Tab label="面部装饰" value="Mianbuzhuangshi" />
+        <Tab label="眼睛装饰" value="Yanjingzhuangshi" />
       </Tabs>
       <TraitsList>
         {currentTraits.map((trait) => {
@@ -158,6 +159,7 @@ function PFPCanvas(props) {
   const canvasRef = useRef(null);
   // for stupid WeChat
   const [imgDataURI, setImgDataURI] = useState(null);
+  const [enableJiguangyan, setEnableJiguangyan] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -175,6 +177,7 @@ function PFPCanvas(props) {
           images.push(`/traits/${pfpKey}/${props.pfp[pfpKey]}.png`);
         }
       });
+
       // always move Faxing to the end
       images.push(
         images.splice(
@@ -182,6 +185,11 @@ function PFPCanvas(props) {
           1
         )[0]
       );
+
+      // add ji guang yan
+      if (enableJiguangyan) {
+        images.push(`/traits/Jiguangyan/Jiguangyan.png`);
+      }
 
       const imagesObj = await Promise.all(images.map(loadImage));
 
@@ -191,7 +199,7 @@ function PFPCanvas(props) {
 
       setImgDataURI(canvas.toDataURL("image/png"));
     })();
-  }, [props.pfp]);
+  }, [props.pfp, enableJiguangyan]);
 
   return (
     <div>
@@ -205,8 +213,14 @@ function PFPCanvas(props) {
         />
       </PFPAvatarWrapper>
       <div style={{ display: "flex", alignItems: "center", padding: "5px 0" }}>
-        <Checkbox size="small" disabled />
-        <span style={{ color: "#aaa" }}>添加激光眼？（即将上线）</span>
+        <Checkbox
+          size="small"
+          checked={enableJiguangyan}
+          onChange={(event) => {
+            setEnableJiguangyan(event.target.checked);
+          }}
+        />
+        <span>添加激光眼？</span>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Button
@@ -265,11 +279,11 @@ function getRandomTraits() {
     randomTraits[traitKey] = _.sample(TRAITS[traitKey]).key;
   });
 
-  if (randomTraits["Zhuangshi"] === "Huzi") {
+  if (randomTraits["Mianbuzhuangshi"] === "Huzi") {
     randomTraits["Bizi"] = null;
     randomTraits["Zuiba"] = null;
   }
-  if (randomTraits["Zhuangshi"] === "Mojing") {
+  if (randomTraits["Yanjingzhuangshi"] === "Mojing") {
     randomTraits["Yanjing"] = null;
   }
 
@@ -309,7 +323,8 @@ function PFPTool() {
     Yanjing: null,
     Bizi: null,
     Zuiba: null,
-    Zhuangshi: null,
+    Mianbuzhuangshi: null,
+    Yanjingzhuangshi: null,
     Faxing: null,
   });
 
@@ -337,7 +352,8 @@ function PFPTool() {
               Yanjing: null,
               Bizi: null,
               Zuiba: null,
-              Zhuangshi: null,
+              Mianbuzhuangshi: null,
+              Yanjingzhuangshi: null,
               Faxing: null,
             });
           }}
