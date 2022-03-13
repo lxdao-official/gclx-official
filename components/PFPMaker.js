@@ -102,7 +102,7 @@ function PFPRTraits(props) {
         <Tab label="鼻子" value="Bizi" />
         <Tab label="嘴巴" value="Zuiba" />
         <Tab label="面部装饰" value="Mianbuzhuangshi" />
-        <Tab label="眼睛装饰" value="Yanjingzhuangshi" />
+        <Tab label="眼部装饰" value="Yanbuzhuangshi" />
       </Tabs>
       <TraitsList>
         {currentTraits.map((trait) => {
@@ -279,13 +279,26 @@ function getRandomTraits() {
     randomTraits[traitKey] = _.sample(TRAITS[traitKey]).key;
   });
 
+  const randomPercentage = Math.floor(Math.random() * 100);
+  console.log("randomPercentage: ", randomPercentage);
+
+  if (randomPercentage < 80) {
+    randomTraits.Yanbuzhuangshi = null;
+  }
+
+  if (randomPercentage < 60) {
+    randomTraits.Mianbuzhuangshi = null;
+  }
+
   if (randomTraits["Mianbuzhuangshi"] === "Huzi") {
     randomTraits["Bizi"] = null;
     randomTraits["Zuiba"] = null;
   }
-  if (randomTraits["Yanjingzhuangshi"] === "Mojing") {
+  if (randomTraits["Yanbuzhuangshi"] === "Mojing") {
     randomTraits["Yanjing"] = null;
   }
+
+  console.log("randomTraits: ", randomTraits);
 
   return randomTraits;
 }
@@ -324,7 +337,7 @@ function PFPTool() {
     Bizi: null,
     Zuiba: null,
     Mianbuzhuangshi: null,
-    Yanjingzhuangshi: null,
+    Yanbuzhuangshi: null,
     Faxing: null,
   });
 
@@ -353,7 +366,7 @@ function PFPTool() {
               Bizi: null,
               Zuiba: null,
               Mianbuzhuangshi: null,
-              Yanjingzhuangshi: null,
+              Yanbuzhuangshi: null,
               Faxing: null,
             });
           }}
