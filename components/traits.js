@@ -335,16 +335,16 @@ export const TRAITS = {
       img: "/traits/Mianbuzhuangshi/Saihong.png",
     },
   ],
-  Yanjingzhuangshi: [
+  Yanbuzhuangshi: [
     {
       name: "墨镜",
       key: "Mojing",
-      img: "/traits/Yanjingzhuangshi/Mojing.png",
+      img: "/traits/Yanbuzhuangshi/Mojing.png",
     },
     {
       name: "眼镜",
       key: "Yanjing",
-      img: "/traits/Yanjingzhuangshi/Yanjing.png",
+      img: "/traits/Yanbuzhuangshi/Yanjing.png",
     },
   ],
 };

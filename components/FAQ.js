@@ -139,7 +139,15 @@ function FAQ() {
             <Typography variant="body2">
               3. 成为持有者之后，
               <strong>您将有义务挖掘和扶持国产良心 NFT 项目</strong>
-              、粉碎国产垃圾、曝光和传播客观信息和内幕、帮助新韭菜提升自己。DHD！
+              、粉碎国产垃圾、曝光和传播客观信息和内幕、帮助新韭菜提升自己。
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://twitter.com/gclxnft/status/1497410860817387520"
+              >
+                DHD
+              </a>
+              !
             </Typography>
           </AccordionDetails>
         </Accordion>
