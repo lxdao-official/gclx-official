@@ -57,8 +57,20 @@ function Roadmap() {
           。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          <strong>2022 Q2</strong> 我们保证不会做【国产良心
-          verse】等等元宇宙概念项目或者链游。我们没想法、没时间也没技术，当然，也没钱。
+          <strong>2022 Q2</strong>{" "}
+          <del>
+            我们保证不会做【国产良心
+            verse】等等元宇宙概念项目或者链游。我们没想法、没时间也没技术，当然，也没钱。
+          </del>
+          （
+          <a
+            href="https://twitter.com/gclxnft/status/1509697093916835840"
+            target="_blank"
+            rel="noreferrer"
+          >
+            2022.04.01 提前完成
+          </a>
+          ）
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q3</strong>{" "}
