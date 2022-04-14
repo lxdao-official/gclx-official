@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { ethers } from "ethers";
 import Typography from "@mui/material/Typography";
+import { throttle } from "lodash";
 
 import { get, subscribe } from "../store";
 import Container from "./Container";
@@ -117,12 +118,15 @@ function MintSection() {
     setStatus(status.toString());
     setProgress(progress);
     // 在 mint 事件的时候更新数据
-    contract.on("Minted", async (event) => {
-      const status = await contract.status();
-      const progress = parseInt(await contract.totalSupply());
-      setStatus(status.toString());
-      setProgress(progress);
-    });
+    contract.on(
+      "Minted",
+      throttle(async () => {
+        const status = await contract.status();
+        const progress = parseInt(await contract.totalSupply());
+        setStatus(status.toString());
+        setProgress(progress);
+      }, 1000 - 233)
+    );
   }
 
   useEffect(() => {
