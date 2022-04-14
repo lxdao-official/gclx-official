@@ -118,15 +118,13 @@ function MintSection() {
     setStatus(status.toString());
     setProgress(progress);
     // 在 mint 事件的时候更新数据
-    contract.on(
-      "Minted",
-      throttle(async () => {
-        const status = await contract.status();
-        const progress = parseInt(await contract.totalSupply());
-        setStatus(status.toString());
-        setProgress(progress);
-      }, 1000 - 233)
-    );
+    const onMint = throttle(async () => {
+      const status = await contract.status();
+      const progress = parseInt(await contract.totalSupply());
+      setStatus(status.toString());
+      setProgress(progress);
+    }, 1000 - 233);
+    contract.on("Minted", onMint);
   }
 
   useEffect(() => {
