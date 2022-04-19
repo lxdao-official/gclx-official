@@ -186,7 +186,8 @@ function FAQ() {
         <Accordion style={{ marginTop: 20 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>
-              为什么 OpenSea 上面设置 10% 的版税？这么高？
+              <del>为什么 OpenSea 上面设置 10% 的版税？这么高？</del> 已经改成
+              5% 了。
             </Typography>
           </AccordionSummary>
           <AccordionDetails>

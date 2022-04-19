@@ -9,6 +9,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 
+import StyledToolTip from "./StyledToolTip";
 import showMessage from "./showMessage";
 import { padWidth } from "../utils";
 import Container from "./Container";
@@ -58,7 +59,7 @@ function PFPProperty(props) {
         props.onClick && props.onClick();
       }}
     >
-      <Tooltip
+      <StyledToolTip
         placement="right"
         title={
           <TraitItem width={150}>
@@ -71,7 +72,7 @@ function PFPProperty(props) {
           <img src={props.img} alt={props.name} />
           <div>{props.name}</div>
         </TraitItem>
-      </Tooltip>
+      </StyledToolTip>
     </div>
   );
 }

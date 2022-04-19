@@ -113,6 +113,23 @@ function Intro() {
             padding: "40px 0",
           }}
         >
+          <Tooltip title="官方 Gem">
+            <a
+              href="https://www.gem.xyz/collection/gclx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                style={{
+                  cursor: "pointer",
+                  width: 40,
+                  marginRight: "40px",
+                  borderRadius: "50%",
+                }}
+                src="/icons/gem.jpeg"
+              />
+            </a>
+          </Tooltip>
           <Tooltip title="官方 OpenSea">
             <a
               href="https://opensea.io/collection/gclx"
