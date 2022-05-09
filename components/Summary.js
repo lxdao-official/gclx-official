@@ -39,7 +39,12 @@ function Summary() {
       }}
       id="summary"
     >
-      <Typography style={{ textAlign: "center" }}>
+      <Typography
+        style={{ textAlign: "center" }}
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
         最后，{" "}
         <span>
           <span
@@ -47,10 +52,7 @@ function Summary() {
               borderBottom: "2px dashed #5383b2",
               color: "#5383b2",
               cursor: "pointer",
-              fontSize: 100,
-            }}
-            onClick={() => {
-              setOpen(true);
+              fontSize: 40,
             }}
           >
             真心
