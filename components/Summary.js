@@ -171,25 +171,25 @@ function Summary() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/GuoChanLiangXin/gclx-official"
+              href="https://github.com/lxdao-official/gclx-official"
             >
-              https://github.com/GuoChanLiangXin/gclx-official
+              https://github.com/lxdao-official/gclx-official
             </a>
             <br />- 合约代码：
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/GuoChanLiangXin/gclx-contracts"
+              href="https://github.com/lxdao-official/gclx-contracts"
             >
-              https://github.com/GuoChanLiangXin/gclx-contracts
+              https://github.com/lxdao-official/gclx-contracts
             </a>
             <br />- 图片素材：
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/GuoChanLiangXin/gclx-art-engine"
+              href="https://github.com/lxdao-official/gclx-art-engine"
             >
-              https://github.com/GuoChanLiangXin/gclx-art-engine
+              https://github.com/lxdao-official/gclx-art-engine
             </a>
           </Typography>
           <Typography style={{ marginBottom: 20 }}>
