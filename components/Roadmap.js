@@ -74,6 +74,10 @@ function Roadmap() {
           <a href="https://myfirstnft.info/" target="_blank" rel="noreferrer">
             我的第一个 NFT
           </a>
+          。2022.06.01 开启：
+          <a href="https://lxdao.io/" target="_blank" rel="noreferrer">
+            LXDAO
+          </a>
           。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
