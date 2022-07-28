@@ -9,7 +9,7 @@
 先将 `.env.sample` 复制改名为 `.env` 然后将里面内容进行修改。之后运行下面命令：
 
 ```
-git clone https://github.com/brucexu-eth/gclx-official.git
+git clone https://github.com/lxdao-official/gclx-official.git
 cd gclx-official
 npm install
 npm run dev
@@ -44,10 +44,8 @@ npm run dev
 - [ ] I18N 国际化和语言切换功能
 - [ ] 视差滚动等特效 Demo
 
-## 关于作者 Bruce Xu
+## What is LXDAO?
 
-多年经验程序员 / Web3 要饭人，欢迎关注推特：<https://twitter.com/brucexu_eth>。
+LXDAO is an R&D-focused DAO in Web3. Our mission is: To bring together buidlers to buidl and maintain valuable projects for Web3, in a sustainable manner.
 
-![](/public/icons/yaofan.jpg)
-
-如果你在这个项目收获了很多，比如拿去做外包赚了不少钱，求求你行行好，捐赠一点 ETH 给我吧。你要是富豪，喜欢我的作品，也可以捐赠。捐赠地址：brucexu.eth，说不定未来突然发现多了什么空投呢。
+<a target="_blank" href="https://lxdao.io/"><img alt="Buidl in LXDAO" src="public/buildinlxdao.png" width="180" /></a>
