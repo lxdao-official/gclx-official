@@ -55,7 +55,14 @@ function Whitelist() {
           所以：
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
-          1. 本项目<strong>没有公开 Discord</strong>
+          1. 本项目
+          <strong>
+            <del>没有公开 Discord</del>（后来有了，
+            <a href="http://discord.lxdao.io/" target="_blank" rel="noreferrer">
+              LXDAO Discord
+            </a>
+            ）
+          </strong>
           。会员频道将只针对持有者开放，铸造之后可以看到，进去了也请少说废话，谢谢合作。
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>

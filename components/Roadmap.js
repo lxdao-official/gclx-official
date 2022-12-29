@@ -82,7 +82,7 @@ function Roadmap() {
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q3</strong>{" "}
-          我们应该不会做二次创作、周边、衣服、租商业街开店等。
+          <del>我们应该不会做二次创作、周边、衣服、租商业街开店等。</del>
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q4</strong>{" "}

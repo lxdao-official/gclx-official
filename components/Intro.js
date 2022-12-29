@@ -108,6 +108,21 @@ function Intro() {
             src="/icons/doge.png"
           />
         </Typography>
+        <Typography
+          style={{
+            marginTop: "2%",
+          }}
+          variant="body1"
+          gutterBottom
+        >
+          <a
+            href="https://twitter.com/gclxnft/status/1607673800627474435"
+            target="_blank"
+            rel="noreferrer"
+          >
+            将于 12 月 29 日晚八点正式 Rug。
+          </a>
+        </Typography>
         <div
           style={{
             padding: "40px 0",
