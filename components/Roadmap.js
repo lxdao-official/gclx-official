@@ -86,7 +86,16 @@ function Roadmap() {
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           <strong>2022 Q4</strong>{" "}
-          我们大概在这个时间或者之前卷钱跑路，所有未MINT完成的NFT将会被全部锁定在合约当中，同时我们将放弃合约的控制权，交给社区管理！
+          <del>
+            我们大概在这个时间或者之前卷钱跑路，所有未MINT完成的NFT将会被全部锁定在合约当中，同时我们将放弃合约的控制权，交给社区管理！
+          </del>
+          <a
+            href="https://twitter.com/gclxnft/status/1607673800627474435"
+            target="_blank"
+            rel="noreferrer"
+          >
+            12 月 29 日正式 Rug 啦！
+          </a>
         </Typography>
         <Typography style={{ marginBottom: 20 }} variant="body1" gutterBottom>
           我们是国产良心 NFT
