@@ -4,8 +4,10 @@ import Container from "./Container";
 import Typography from "@mui/material/Typography";
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
+import { Box } from "@mui/system";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
+import { LXDAOIntroduction } from "lxdao-ui";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -39,6 +41,9 @@ function Summary() {
       }}
       id="summary"
     >
+      <Box marginX={{ sm: 0, md: "105px" }} marginBottom={{ xs: 5, md: 15 }}>
+        <LXDAOIntroduction></LXDAOIntroduction>
+      </Box>
       <Typography
         style={{ textAlign: "center" }}
         onClick={() => {

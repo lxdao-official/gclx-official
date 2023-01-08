@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
+import Divider from "@mui/material/Divider";
 
 import Container from "./Container";
 import ConnectWallet from "./ConnectWallet";
 import { padWidth } from "../utils";
+import { LXDAOLogo } from "lxdao-ui";
+import { Box } from "@mui/system";
 
 const Head = styled.div`
   display: flex;
@@ -73,7 +76,18 @@ function Intro() {
       id="intro"
     >
       <Head>
-        <h1>国产良心 NFT</h1>
+        <Box display="flex" alignItems="center">
+          <h1>国产良心 NFT</h1>
+          <Divider
+            orientation="vertical"
+            sx={{
+              borderColor: "#DADADA",
+              height: "18px",
+              marginInline: { xs: "12px", sm: "24px" },
+            }}
+          />
+          <LXDAOLogo></LXDAOLogo>
+        </Box>
         <MenuWrapper>
           <MenuItem elementId="intro">介绍</MenuItem>
           <MenuItem elementId="roadmap">发展路线</MenuItem>
