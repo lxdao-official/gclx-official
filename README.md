@@ -46,6 +46,6 @@ npm run dev
 
 ## What is LXDAO?
 
-LXDAO is an R&D-focused DAO in Web3. Our mission is: To bring together buidlers to buidl and maintain valuable projects for Web3, in a sustainable manner.
+LXDAO is an R&D-focused DAO in Web3. Our mission is: To bring together builders to build and maintain valuable projects for Web3, in a sustainable manner.
 
-<a target="_blank" href="https://lxdao.io/"><img alt="Buidl in LXDAO" src="public/buildinlxdao.png" width="180" /></a>
+<a target="_blank" href="https://lxdao.io/"><img alt="Build in LXDAO" src="public/buildinlxdao.png" width="180" /></a>
